@@ -1,0 +1,6 @@
+.gitignore
+.idea
+.vscode
+/Task-001/.vscode
+/Task-001/.idea
+/Task-001/WCount.scala
