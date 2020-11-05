@@ -58,6 +58,10 @@ echo "Adding all configurations..."
 ex="export JAVA_HOME=~/opt/jdk1.8.0_221"
 sed -i "25s@.*@${ex}@" hadoop-env.sh
 
+# Remove empty configuration tags in the core-site.xml file
+sed -i "s@<configuration>@$ @g" core-site.xml
+sed -i "s@</configuration>@$ @g" core-site.xml
+
 # Add config settings to core-site.xml file
 echo '
 <configuration>
@@ -66,6 +70,11 @@ echo '
     <value>hdfs://localhost:9000</value>
   </property>
 </configuration>' >> core-site.xml
+
+
+# Remove empty configuration tags in the hdfs-site.xml file
+sed -i "s@<configuration>@$ @g" hdfs-site.xml
+sed -i "s@</configuration>@$ @g" hdfs-site.xml
 
 # Add config settings to hdfs-site.xml file
 echo '
@@ -87,6 +96,10 @@ echo '
 </configuration>' >> hdfs-site.xml
 
 
+# Remove empty configuration tags in the yarn-site.xml file
+sed -i "s@<configuration>@$ @g" yarn-site.xml
+sed -i "s@</configuration>@$ @g" yarn-site.xml
+
 # Add config settings to yarn-site.xml
 echo '
 <configuration>
@@ -99,6 +112,10 @@ echo '
 
 # Make a copy of mapred-site.xml.template file:
 cp mapred-site.xml.template mapred-site.xml
+
+# Remove empty configuration tags in the mapred-site.xml file
+sed -i "s@<configuration>@$ @g" mapred-site.xml
+sed -i "s@</configuration>@$ @g" mapred-site.xml
 
 # Add config settings to the mapred-site.xml file
 echo '
@@ -123,4 +140,5 @@ hdfs namenode -format
 # Source the .bash_profile
 source ~/.bash_profile
 
-echo 'Installation COMPLETE!!!'
+echo '
+Hadoop Installation Successful !!!'
