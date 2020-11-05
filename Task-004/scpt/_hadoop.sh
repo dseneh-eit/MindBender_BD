@@ -59,8 +59,8 @@ ex="export JAVA_HOME=~/opt/jdk1.8.0_221"
 sed -i "25s@.*@${ex}@" hadoop-env.sh
 
 # Remove empty configuration tags in the core-site.xml file
-sed -i "s@<configuration>@$ @g" core-site.xml
-sed -i "s@</configuration>@$ @g" core-site.xml
+sed -i "s@<configuration>@ @g" core-site.xml
+sed -i "s@</configuration>@ @g" core-site.xml
 
 # Add config settings to core-site.xml file
 echo '
@@ -73,8 +73,8 @@ echo '
 
 
 # Remove empty configuration tags in the hdfs-site.xml file
-sed -i "s@<configuration>@$ @g" hdfs-site.xml
-sed -i "s@</configuration>@$ @g" hdfs-site.xml
+sed -i "s@<configuration>@ @g" hdfs-site.xml
+sed -i "s@</configuration>@ @g" hdfs-site.xml
 
 # Add config settings to hdfs-site.xml file
 echo '
@@ -97,8 +97,8 @@ echo '
 
 
 # Remove empty configuration tags in the yarn-site.xml file
-sed -i "s@<configuration>@$ @g" yarn-site.xml
-sed -i "s@</configuration>@$ @g" yarn-site.xml
+sed -i "s@<configuration>@ @g" yarn-site.xml
+sed -i "s@</configuration>@ @g" yarn-site.xml
 
 # Add config settings to yarn-site.xml
 echo '
@@ -114,8 +114,8 @@ echo '
 cp mapred-site.xml.template mapred-site.xml
 
 # Remove empty configuration tags in the mapred-site.xml file
-sed -i "s@<configuration>@$ @g" mapred-site.xml
-sed -i "s@</configuration>@$ @g" mapred-site.xml
+sed -i "s@<configuration>@ @g" mapred-site.xml
+sed -i "s@</configuration>@ @g" mapred-site.xml
 
 # Add config settings to the mapred-site.xml file
 echo '
