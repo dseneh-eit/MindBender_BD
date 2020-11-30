@@ -1,3 +1,4 @@
+# Local copy of producer
 import requests
 from kafka import KafkaProducer
 import threading, sys

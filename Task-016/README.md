@@ -11,3 +11,4 @@ For this project, I used the [Marta](https://www.itsmarta.com/app-developer-reso
 #### Task:
 - Create a Kafka topic with 3 partition, 3 replication factor (3 brokers)
 - Injest data from the api to the topic created
+- Run producer in Hortonworks sandbox vm
