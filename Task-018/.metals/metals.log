@@ -1,0 +1,7 @@
+2020.12.02 11:33:56 INFO  Started: Metals version 0.9.7 in workspace '/home/user/Desktop/bigdata/MindBender_BD/Task-018' for client vscode.
+2020.12.02 11:33:56 INFO  time: initialize in 0.72s
+2020.12.02 11:33:57 WARN  Build server is not auto-connectable.
+2020.12.02 11:33:57 WARN  no build tool detected in workspace '/home/user/Desktop/bigdata/MindBender_BD/Task-018'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.02 16:33:16 WARN  no build target for: /home/user/Desktop/bigdata/MindBender_BD/Task-018/consumer.scala
+2020.12.02 16:33:21 INFO  no build target: using presentation compiler with only scala-library
+2020.12.02 16:33:25 INFO  shutting down Metals
