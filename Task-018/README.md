@@ -12,5 +12,6 @@ For this project, I used the [Marta](https://www.itsmarta.com/app-developer-reso
 - Create a Kafka topic with 3 partition, 3 replication factor (3 brokers)
 - Create a producer in python to injest data from api to the topic
 - Create a consumer to consume data from the kafka topic of the three brokers
+- Create the consumer using scala (using sbt)
 - Spark processing: Extract needed columns from the data received from the topic
-- Create the consumer within scala and have the consumer compiled in .jar file format
+- Have the consumer compiled in .jar file format
