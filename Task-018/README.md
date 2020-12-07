@@ -15,3 +15,4 @@ For this project, I used the [Marta](https://www.itsmarta.com/app-developer-reso
 - Create the consumer using scala (using sbt)
 - Spark processing: Extract needed columns from the data received from the topic
 - Have the consumer compiled in .jar file format
+- Save output to Hive database for analysis

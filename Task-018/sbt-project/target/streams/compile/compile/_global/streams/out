@@ -1,0 +1,16 @@
+[0m[[0m[31merror[0m] [0m[0m/home/user/Desktop/bigdata/pipeline3/martabus/src/main/scala/martabus.scala:54:9: query is already defined as value query[0m
+[0m[[0m[31merror[0m] [0m[0m    val query = sc[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/user/Desktop/bigdata/pipeline3/martabus/src/main/scala/martabus.scala:37:16: not found: value spark[0m
+[0m[[0m[31merror[0m] [0m[0m        import spark.implicits._[0m
+[0m[[0m[31merror[0m] [0m[0m               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/user/Desktop/bigdata/pipeline3/martabus/src/main/scala/martabus.scala:38:18: not found: value spark[0m
+[0m[[0m[31merror[0m] [0m[0m        val sc = spark[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/user/Desktop/bigdata/pipeline3/martabus/src/main/scala/martabus.scala:44:21: value $ is not a member of StringContext[0m
+[0m[[0m[31merror[0m] [0m[0m            .select($"value" cast "string" as "json")[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/user/Desktop/bigdata/pipeline3/martabus/src/main/scala/martabus.scala:45:31: value $ is not a member of StringContext[0m
+[0m[[0m[31merror[0m] [0m[0m            .select(from_json($"json", schema1) as "data")[0m
+[0m[[0m[31merror[0m] [0m[0m                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m5 errors found[0m

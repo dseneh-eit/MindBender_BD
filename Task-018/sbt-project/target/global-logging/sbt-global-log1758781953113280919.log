@@ -1,0 +1,14 @@
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(sbtMapExec 60 __129da10e-7370-4edf-a0b6-e06b1ce44f2f, None, None)
+[debug] > Exec(bspScalaTestClasses file:/home/user/Desktop/bigdata/martabus/#martabus/Compile, Some(__129da10e-7370-4edf-a0b6-e06b1ce44f2f), Some(CommandSource(network-1)))
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":4,"message":"Processing"})
+[debug] Evaluating tasks: bspScalaTestClasses
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[success] Total time: 0 s, completed Dec 5, 2020 3:30:47 PM
+[debug] > Exec(sbtCompleteExec 60, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(sbtReportResult 60, Some(60), Some(CommandSource(network-1)))
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":4,"message":"Processing"})
+[debug] unmatched json response for requestId Some(60): {"status":"Done","channelName":"network-1","execId":"60","commandQueue":["shell"],"exitCode":0}
+[debug] > Exec(shell, None, None)

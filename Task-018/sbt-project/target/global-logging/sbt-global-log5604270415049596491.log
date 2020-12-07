@@ -1,0 +1,17 @@
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(sbtMapExec 61 __9adafad3-d25b-41f2-a26b-06e9f63d51c1, None, None)
+[debug] > Exec(bspScalaMainClasses file:/home/user/Desktop/bigdata/martabus/#martabus/Compile, Some(__9adafad3-d25b-41f2-a26b-06e9f63d51c1), Some(CommandSource(network-1)))
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":4,"message":"Processing"})
+[debug] Evaluating tasks: bspScalaMainClasses
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskStart, {"taskId":{"id":"44","parents":[]},"eventTime":1607200247709,"message":"Compiling martabus","dataKind":"compile-task","data":{"target":{"uri":"file:/home/user/Desktop/bigdata/martabus/#martabus/Compile"}}})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/publishDiagnostics, {"textDocument":{"uri":"file:///home/user/Desktop/bigdata/martabus/src/main/scala/martabus.scala"},"buildTarget":{"uri":"file:/home/user/Desktop/bigdata/martabus/#martabus/Compile"},"diagnostics":[],"reset":true})
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/taskFinish, {"taskId":{"id":"44","parents":[]},"eventTime":1607200247720,"message":"Compiled martabus","status":1,"dataKind":"compile-report","data":{"target":{"uri":"file:/home/user/Desktop/bigdata/martabus/#martabus/Compile"},"errors":0,"warnings":0,"time":11}})
+[success] Total time: 0 s, completed Dec 5, 2020 3:30:47 PM
+[debug] > Exec(sbtCompleteExec 61, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(sbtReportResult 61, Some(61), Some(CommandSource(network-1)))
+[debug] jsonRpcNotify: JsonRpcNotificationMessage(2.0, build/logMessage, {"type":4,"message":"Processing"})
+[debug] unmatched json response for requestId Some(61): {"status":"Done","channelName":"network-1","execId":"61","commandQueue":["shell"],"exitCode":0}
+[debug] > Exec(shell, None, None)
