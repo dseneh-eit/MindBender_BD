@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: #000011;
+  min-height: 100vh;
+  display: flex;
+  /*flex-direction: column;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  font-size: calc(10px + 2vmin);
+  color: #040f23;
+}
+.button-header {
+  margin-top: 30px;
+  height: 50px;
+  /*background-color: #040f23;*/
+}
+.btn {
+  width: 120px;
+  margin: 3px;
+}
