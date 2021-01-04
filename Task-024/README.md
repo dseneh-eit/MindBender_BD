@@ -1,4 +1,4 @@
-## Task 0024 - Codding Challenge
+## Task 0024 - Coding Challenge
 
 ### Duration: 1hr
 
