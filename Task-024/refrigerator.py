@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[165]:
-
-
 class Refrigerator():
     def __init__(self) -> None:
         self.shelf_s = []
@@ -97,58 +94,3 @@ class Refrigerator():
         else:
             print('Item must be placed into the right shelf size.')
             return None
-
-
-# In[166]:
-
-
-ref = Refrigerator()
-
-
-# In[167]:
-
-
-ref.shelf_s
-
-
-# In[168]:
-
-
-ref.put(item='New2',size=10,shelf=1)
-
-
-# In[170]:
-
-
-ref.get('New2',1)
-
-
-# In[64]:
-
-
-d = [{'item': 'New', 'size':10}, {'item': 'Old', 'size':20}]
-
-
-# In[65]:
-
-
-i = [item['item'] for item in d]
-
-
-# In[66]:
-
-
-i
-
-
-# In[68]:
-
-
-'New' in i
-
-
-# In[18]:
-
-
-sum(item['size'] for item in d)
-
