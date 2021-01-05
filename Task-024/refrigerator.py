@@ -8,7 +8,58 @@ class Refrigerator():
         self.shelf_l = []
         super().__init__()
     
-    # Remove items from the refrigerator
+
+    # Add items to the refrigerator.
+    def put(self, item=None, size=0, shelf=None):
+        """
+        Add items from a specified shelf.
+        Shelves Numbers:
+            Small  = 1
+            Medium = 2
+            Large  = 3
+        """
+        
+        if item is None:
+            return 'Please specify item.'
+        
+        if size is None or size <= 0 or size > 500:
+            return 'Item size must between 1 and 500.'
+
+        if shelf is None or shelf == 0 or shelf > 3:
+            return 'Please specify a valid shelf number between 1 and 3.'
+        
+        if size <=100 and shelf == 1:
+            total_size_s =sum(item['size'] for item in self.shelf_s)
+            s = size + total_size_s
+            if s <= 100:
+                self.shelf_s.append({'item':item, 'size':size})
+                return f'{item} added to small sized shelf.'
+            else:
+                return f'Item cannot fit within this shelf. You have {100-total_size_s}/100cm of free space.'
+                
+        elif size >= 101 and size <= 300 and shelf == 2:
+            total_size_m =sum(item['size'] for item in self.shelf_m)
+            s = size + total_size_m
+            if s <= 300:
+                self.shelf_m.append({'item':item, 'size':size})
+                return f'{item} added to medium sized shelf.'
+            else:
+                print(f'Item cannot fit within this shelf. You have {300-total_size_m}/100cm of free space.')
+                
+        elif size >= 301 and size <= 500 and shelf == 3:
+            total_size_l =sum(item['size'] for item in self.shelf_l)
+            s = size + total_size_l
+            if s <= 500:
+                self.shelf_l.append({'item':item, 'size':size})
+                print(f'{item} added to large sized shelf.')
+            else:
+                print(f'Item cannot fit within this shelf. You have {500-total_size_l}/100cm of free space.')
+        else:
+            print('Item must be placed into the right size of shelf.')
+            return None
+
+
+    # Get items out of the refrigerator
     def get(self, item, shelf):
         """
         Remove items from a specified shelf.
@@ -44,53 +95,3 @@ class Refrigerator():
                     break
                 else: 
                     return 'Item not found in this shelf.'
-    
-    
-    # Put method checks severial conditions before executing.
-    def put(self, item=None, size=0, shelf=None):
-        """
-        Add items from a specified shelf.
-        Shelves Numbers:
-            Small  = 1
-            Medium = 2
-            Large  = 3
-        """
-        
-        if item is None:
-            return 'Please specify item'
-        
-        if size is None or size <= 0 or size > 500:
-            return 'Item size must between 1 and 500'
-
-        if shelf is None or shelf == 0 or shelf > 3:
-            return 'Please specify a valid shelf number between 1 and 3'
-        
-        if size <=100 and shelf == 1:
-            total_size_s =sum(item['size'] for item in self.shelf_s)
-            s = size + total_size_s
-            if s <= 100:
-                self.shelf_s.append({'item':item, 'size':size})
-                return f'{item} added to small sized shelf.'
-            else:
-                return f'Item cannot fit in this shelf. You have {100-total_size_s}/100cm of free space.'
-                
-        elif size >= 101 and size <= 300 and shelf == 2:
-            total_size_m =sum(item['size'] for item in self.shelf_m)
-            s = size + total_size_m
-            if s <= 300:
-                self.shelf_m.append({'item':item, 'size':size})
-                return f'{item} added to medium sized shelf.'
-            else:
-                print(f'Item cannot fit in this shelf. You have {300-total_size_m}/100cm of free space.')
-                
-        elif size >= 301 and size <= 500 and shelf == 3:
-            total_size_l =sum(item['size'] for item in self.shelf_l)
-            s = size + total_size_l
-            if s <= 500:
-                self.shelf_l.append({'item':item, 'size':size})
-                print(f'{item} added to large sized shelf.')
-            else:
-                print(f'Item cannot fit in this shelf. You have {500-total_size_l}/100cm of free space.')
-        else:
-            print('Item must be placed into the right shelf size.')
-            return None
