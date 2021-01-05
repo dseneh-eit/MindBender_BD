@@ -20,29 +20,32 @@ class Refrigerator():
         """
         
         if item is None:
-            return 'Please specify item.'
+            print('Please specify item.')
+            return None
         
         if size is None or size <= 0 or size > 500:
-            return 'Item size must between 1 and 500.'
+            print('Item size must be between 1 and 500.')
+            return None
 
         if shelf is None or shelf == 0 or shelf > 3:
-            return 'Please specify a valid shelf number between 1 and 3.'
+            print('Please specify a valid shelf number between 1 and 3.')
+            return None
         
         if size <=100 and shelf == 1:
             total_size_s =sum(item['size'] for item in self.shelf_s)
             s = size + total_size_s
             if s <= 100:
                 self.shelf_s.append({'item':item, 'size':size})
-                return f'{item} added to small sized shelf.'
+                print(f'{item} added to small sized shelf.')
             else:
-                return f'Item cannot fit within this shelf. You have {100-total_size_s}/100cm of free space.'
+                print(f'Item cannot fit within this shelf. You have {100-total_size_s}/100cm of free space.')
                 
         elif size >= 101 and size <= 300 and shelf == 2:
             total_size_m =sum(item['size'] for item in self.shelf_m)
             s = size + total_size_m
             if s <= 300:
                 self.shelf_m.append({'item':item, 'size':size})
-                return f'{item} added to medium sized shelf.'
+                print(f'{item} added to medium sized shelf.')
             else:
                 print(f'Item cannot fit within this shelf. You have {300-total_size_m}/100cm of free space.')
                 
@@ -69,29 +72,29 @@ class Refrigerator():
             Large  = 3
         """
         if shelf <1 or shelf >3:
-            return 'You must enter a valid shelf number between 1 and 3'
+            print('You must enter a valid shelf number between 1 and 3')
 
         if shelf == 1:
             for i in range(len(self.shelf_s)):
                 if self.shelf_s[i]['item'] == item and len(self.shelf_s) >0:
                     del self.shelf_s[i]
-                    return f'{item} has been deleted from the small shelf.'
+                    print(f'{item} has been deleted from the small shelf.')
                     break
                 else: 
-                    return 'Item not found in this shelf.'
+                    print(f'{item} not found in this shelf.')
         elif shelf == 2:
             for i in range(len(self.shelf_m)):
                 if self.shelf_s[i]['item'] == item  and len(self.shelf_m) >0:
                     del self.shelf_2[i]
-                    return f'{item} has been deleted from the medium shelf.'
+                    print(f'{item} has been deleted from the medium shelf.')
                     break
                 else: 
-                    return 'Item not found in this shelf.'
+                    print(f'{item} not found in this shelf.')
         elif shelf == 3:
             for i in range(len(self.shelf_l)):
                 if self.shelf_l[i]['item'] == item and len(self.shelf_l) >0:
                     del self.shelf_l[i]
-                    return f'{item} has been deleted from the large shelf.'
+                    print(f'{item} has been deleted from the large shelf.')
                     break
                 else: 
-                    return 'Item not found in this shelf.'
+                    print(f'{item} is not found in this shelf.')
